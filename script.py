@@ -21,7 +21,7 @@ def pdf_to_xml(url):
     return r.text
 
 def extract_entities(xml):
-    '''Takes an xml string and returns a json with the entities'''
+    '''Takes an xml as string and returns a json with the entities'''
     
     pattern = re.compile(r'<\?xml.*\?>')   # we need to get rid of the xml declaration
     xml = pattern.sub('', xml)
