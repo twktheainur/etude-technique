@@ -33,16 +33,16 @@ def extract_entities(xml):
 
 
 
-file = pd.read_excel('https://github.com/Kipre/etude-technique/blob/master/2020_export_Projet_Indexation_Automatique_Notice_accesTI_public_depuis2010_20200204.xlsx?raw=true')
+file = pd.read_excel('2020_export_Projet_Indexation_Automatique_Notice_accesTI_public_depuis2010_20200204.xlsx')
 file = file.loc[file.LANGUE_DOC=="fre"]
 
 for i, pdf in file['ACCES_TEXTE_INTEGRAL'].iteritems():
 	name = pdf.split('/')[3]
 	xml = pdf_to_xml(pdf)
 	json = extract_entities(xml)
-	name+=".json"
+	name += ".json"
 	fichier = open(name, "w")
-	print(json, file=fichier )
+	print(json, file=fichier)
 	fichier.close()
 
 	if i == 3:
