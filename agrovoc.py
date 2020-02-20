@@ -14,10 +14,11 @@ class Agrovoc:
         self.graph = graph
         logger.info("Unzipping agrovoc...")
         with zipfile.ZipFile(agrovoc_zip_path, 'r') as zip_ref:
-            rdf = zip_ref.read(zip_ref.namelist()[0])
+            zip_ref.extractall('data')
         logger.info("Loading agrovoc into ClaimsKG graph...")
 
-        #graph.parse(rdf)
+        graph.parse('data/agrovoc.rdf')
+
 
 
 g = Graph()
