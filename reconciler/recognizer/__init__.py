@@ -3,7 +3,7 @@ from typing import List
 
 # (concept_id, concept, concept_start, concept_end, text[concept_start:concept_end],
 # match_cursor - stop_count)
-from claimskg.reconciler.dictionary import DictionaryLoader
+from reconciler.dictionary import DictionaryLoader
 
 
 class Annotation:
