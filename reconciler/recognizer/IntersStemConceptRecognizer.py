@@ -5,8 +5,8 @@ from nltk import TreebankWordTokenizer, StemmerI, SnowballStemmer
 from nltk.tokenize import word_tokenize
 from tqdm import tqdm
 
-from claimskg.reconciler.dictionary import DictionaryLoader
-from claimskg.reconciler.recognizer import ConceptRecognizer, Annotation
+from reconciler.dictionary import DictionaryLoader
+from reconciler.recognizer import ConceptRecognizer, Annotation
 
 
 class IntersStemConceptRecognizer(ConceptRecognizer):

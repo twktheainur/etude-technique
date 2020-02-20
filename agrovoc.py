@@ -17,7 +17,7 @@ class Agrovoc:
             rdf = zip_ref.read(zip_ref.namelist()[0])
         logger.info("Loading agrovoc into ClaimsKG graph...")
 
-        graph.load(rdf)
+        #graph.parse(rdf)
 
 
 g = Graph()
