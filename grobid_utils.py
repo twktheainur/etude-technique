@@ -9,9 +9,9 @@ def get_body_text(root):
 
     for child in root.getchildren():
         if 'text' in child.tag:
-            for subchild in child.getchildren():
-                if 'body' in subchild.tag:
-                    return ' '.join(subchild.itertext())
+            for sub_child in child.getchildren():
+                if 'body' in sub_child.tag:
+                    return ' '.join(sub_child.itertext())
 
 
 def pdf_to_xml(url):
