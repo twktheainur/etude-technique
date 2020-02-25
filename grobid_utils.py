@@ -50,3 +50,51 @@ def intersection(set1, set2):
                 break
     return inter_concept
 
+
+def to_agrovoc(concepts, agrovoc):
+    """Transforms a list of strings (entities) to a set of concepts (tuples of (uri, label))
+       requires an instance of an Agrovoc to make the queries"""
+
+    result = set()
+    for concept in concepts:
+        result = result.union(agrovoc.find_with_agrovoc(concept))
+    return result        
+
+
+class GrobidCallback:
+
+    def __init__(self, agrovoc, message=""):
+        self.average_accuracy = 0
+        self.average_precision = 0
+        self.average_recovery = 0
+        self.average_nb_entities = 0
+        self.message = message
+        self.examples = 0
+        self.memory = []
+        self.text = ""
+        self.agrovoc = agrovoc
+
+    def update(self, descriptors, entities):
+        """ 
+        Updates the statistics.
+      
+        Parameters: 
+        descriptors (set): set of the descriptor concepts (uri, label)
+        entities (list): list of all the identified entities and categories by entity-fishing
+      
+        Returns: 
+        str: Update message 
+        """
+        set2 = to_agrovoc(entities, self.agrovoc)
+        self.text += ' '.join([word.replace(' ', '_') for _, word in set2])
+        recovery = len(set2) / len(entities) if len(entities) > 0 else 0
+        res = intersection(descriptors, set2)
+        accuracy = len(res) / len(descriptors) if len(descriptors) > 0 else 0
+        precision = len(res) / len(set2) if len(set2) > 0 else 0
+        self.memory.append([accuracy, precision, recovery])
+        self.average_accuracy = (self.average_accuracy * self.examples + accuracy) / (self.examples + 1)
+        self.average_nb_entities = (self.average_nb_entities * self.examples + len(entities)) / (self.examples + 1)
+        self.average_precision = (self.average_precision * self.examples + precision) / (self.examples + 1)
+        self.average_recovery = (self.average_recovery * self.examples + recovery) / (self.examples + 1)
+        self.examples += 1
+        return "{} : {} , {} , {}".format(self.message, accuracy, precision, recovery)
