@@ -36,3 +36,17 @@ def extract_entities(xml, lang='fr'):
     r = requests.post('http://cloud.science-miner.com/nerd/service/disambiguate',
                       files={'query': query})
     return r.text
+
+
+def intersection(set1, set2):
+    """Computes the intersection of two sets of concepts
+       the sets must be populated with tuples of (uri, label)"""
+
+    inter_concept = set()
+    for concept1 in set1:
+        for concept2 in set2:
+            if concept1[0] == concept2[0]:
+                inter_concept.add(concept1)
+                break
+    return inter_concept
+

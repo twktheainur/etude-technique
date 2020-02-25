@@ -91,6 +91,12 @@ Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombr
 | Français - texte complet | 0.455 | 0.070 | 0.226 | 297 |
 | Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 |
 
+Le violinplot suivant reprend le mêmes chiffres mais montre les distributions:
+
+<p align='center'>
+	<img src='resources/violinplot.png'>
+</p>
+
 ### En images
 
 Nous avons pensé qu'il etait interessant de visualiser les mots qui sont identifiés le plus souvent par entity-fishing.
