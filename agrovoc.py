@@ -1,5 +1,4 @@
 from logging import getLogger
-
 from rdflib import Graph, Namespace
 import zipfile
 
@@ -44,14 +43,14 @@ class Agrovoc:
         dictionary_loader = StringDictionaryLoader(string_entries)
         dictionary_loader.load()
 
-        if lang=='fr':
+        if lang == 'fr':
             self.concept_recognizer = IntersStemConceptRecognizer(dictionary_loader,
-                                                              "data/stopwordsfr.txt",
-                                                              "data/termination_termsfr.txt")
+                                                                  "data/stopwordsfr.txt",
+                                                                  "data/termination_termsfr.txt")
         else:
             self.concept_recognizer = IntersStemConceptRecognizer(dictionary_loader,
-                                                              "data/stopwordsen.txt",
-                                                              "data/termination_termsen.txt")
+                                                                  "data/stopwordsen.txt",
+                                                                  "data/termination_termsen.txt")
         self.concept_recognizer.initialize()
 
     def find_with_agrovoc(self, keyword):

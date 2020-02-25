@@ -113,6 +113,4 @@ Une autre raison est que nous essayons de faire de l'extraction de mots clés en
 Ce qui signifie que un mot-clé peut etre très pertinent même s'il n'est pas présent dans le texte. 
 Or notre système ne sera pas capable d'identifier de tels mots clés.
 
-Les pistes d'amélioration sont
-
 ## Bibliographie
