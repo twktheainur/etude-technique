@@ -30,6 +30,11 @@ Cet outil dispose aussi d'une API REST que nous avons utilisé, il dispose de di
 Ceux-ci sont entrainés sur Wikipédia et ne sont donc pas tout à fait adaptés au domaine de l'agronomie.
 
 Voici un exemple de sortie dans la webapp de démonstration:
+
+<p align='center'>
+	<img src='resources/nerd.png'>
+</p>
+
 ![NERD](resources/nerd.png)
 
 ## Deploiement
