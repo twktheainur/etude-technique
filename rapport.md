@@ -29,15 +29,29 @@ Par exemple entity-fishing necessite GROBID et GROBID-NER (Named Entity Recognit
 Cet outil dispose aussi d'une API REST que nous avons utilisé, il dispose de differents modèles pour les principaux languages européens.
 Ceux-ci sont entrainés sur Wikipédia et ne sont donc pas tout à fait adaptés au domaine de l'agronomie.
 
-Voici un exemple de sortie dans la webapp de démonstration:
+Voici un exemple de sortie dans la [webapp de démonstration](http://cloud.science-miner.com/nerd/):
 
 <p align='center'>
 	<img src='resources/nerd.png'>
 </p>
 
-![NERD](resources/nerd.png)
-
 ## Deploiement
+
+Dans cette section nous allons expliquer comment nous avons procédé durant cette étude technique.
+
+Nous avons commencé par installer GROBID sur une machine, cette étape n'etait pas particulierement compliquée mais nous avons dû nous assurer que GROBID possédait toutes les autorisatons d'accès nécessaires.
+Nous avons utilisé l'API REST avec une simple requette POST écrite en Python:
+
+```python
+import requests
+
+pdf = requests.get('url_du_pdf')  # on récupère le pdf dans l'archive
+r = requests.post('http://localhost:8080/api/processFulltextDocument', 
+                  files={'input': pdf.content}) # on fait appel a GROBID
+r.text # on recupère une string de l'xml TEI
+```
+Dans l'exemple ci-dessus nous faisons appel au service `processFulltextDocument` qui nous rend l'`xml` contenant toute l'information de l'article.
+Il y a d'autres services qui permettent d'extraire que des sous-parties de l'information comme les références ou le header.
 
 
 
