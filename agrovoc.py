@@ -10,7 +10,7 @@ logger = getLogger("Agrovoc")
 
 
 class Agrovoc:
-    def __init__(self, graph: Graph, agrovoc_zip_path="data/agrovoc.zip"):
+    def __init__(self, graph: Graph, lang='fr', agrovoc_zip_path="data/agrovoc.zip"):
         self.graph = graph
         logger.info("Unzipping agrovoc...")
         with zipfile.ZipFile(agrovoc_zip_path, 'r') as zip_ref:
@@ -44,9 +44,14 @@ class Agrovoc:
         dictionary_loader = StringDictionaryLoader(string_entries)
         dictionary_loader.load()
 
-        self.concept_recognizer = IntersStemConceptRecognizer(dictionary_loader,
+        if lang=='fr':
+            self.concept_recognizer = IntersStemConceptRecognizer(dictionary_loader,
                                                               "data/stopwordsfr.txt",
                                                               "data/termination_termsfr.txt")
+        else:
+            self.concept_recognizer = IntersStemConceptRecognizer(dictionary_loader,
+                                                              "data/stopwordsen.txt",
+                                                              "data/termination_termsen.txt")
         self.concept_recognizer.initialize()
 
     def find_with_agrovoc(self, keyword):

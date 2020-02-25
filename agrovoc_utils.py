@@ -20,7 +20,7 @@ def pdf_to_xml(url):
                       files={'input': r.content})
     return r.text
 
-def extract_entities(xml):
+def extract_entities(xml, lang='fr'):
     '''Takes an xml string and returns a json with the entities'''
     
     pattern = re.compile(r'<\?xml.*\?>')   # we need to get rid of the xml declaration
@@ -29,7 +29,7 @@ def extract_entities(xml):
     fulltext = get_body_text(root)
     alphanumeric = re.compile("([^\w\s']|_|\n|\t)+")
     fulltext = alphanumeric.sub(' ', fulltext)
-    query = '{"text": "' + fulltext + '", "language": {"lang": "fr"} }'
+    query = '{"text": "' + fulltext + '", "language": {"lang": "'+lang+'"} }'
     r = requests.post('http://cloud.science-miner.com/nerd/service/disambiguate', 
                       files={'query': query})
     return r.text
