@@ -15,8 +15,10 @@ Dans l'archive ouverte du Cirad, l'indexation s'est faite jusque là à la main.
 La problematique est donc d'extraire des mots clés ainsi que des entités geographiques des publication non structurées (sous format `pdf`).
 Le but final de cette démarche est de faciliter la consultation et la recherche documentaire dans l'archive. 
 
+## GROBID
 
-## Manuel d'utilisation
+## Documentation
+
 L'indexation automatique a été faite avec des mots clés issus de Agrovoc. 
 En effet Agritrop identifie et décrit les ressources qu'il héberge 
 
