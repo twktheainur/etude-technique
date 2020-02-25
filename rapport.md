@@ -71,13 +71,17 @@ Nous n'avons pas pu exploiter ce score de confiance pour identifier les entités
 
 ## Résultats 
 
-Dans cette section nous allons décrire les résultats que nous avont obtenu pour les publications en fançais et en anglais.
+Dans cette section nous allons décrire les résultats que nous avont obtenu pour les publications en fançais et en anglais. 
+Le statistiques presentées dans cette section ont été calculées sur 100 publications car le temps d'execution est relativement élevé (plus ou moins 30 minutes pour les 100).
 
 ### En chiffres
 
 Nous avons identifié trois métriques intéressantes dans notre contexte: l'accuracy, la précision et le recouvrement.
 
-
+| Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités |
+| ---- | -------: | --------: | -------: | ---------------------: |
+| Français - texte complet | 0.455 | 0.070 | 0.226 | 297 |
+| Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 |
 
 ### En images
 
