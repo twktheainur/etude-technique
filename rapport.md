@@ -71,7 +71,7 @@ Nous n'avons pas pu exploiter ce score de confiance pour identifier les entités
 
 ## Résultats 
 
-Dans cette section nous allons décrire les résultats que nous avont obtenu pour les publications en fançais et en anglais. 
+Dans cette section nous allons décrire les résultats que nous avont obtenu pour les publications en français et en anglais. 
 Le statistiques presentées dans cette section ont été calculées sur 100 publications car le temps d'execution est relativement élevé (plus ou moins 30 minutes pour les 100).
 Nous utilisons trois ensembles pour calculer les metriques: 
  - les _descripteurs_ de la publication (des mots clés issus de AGROVOC identifiés par des documentalistes/indexeurs qui decrivent la publication);
@@ -82,8 +82,8 @@ Nous utilisons trois ensembles pour calculer les metriques:
 
 Nous avons identifié trois métriques intéressantes dans notre contexte: l'accuracy, la précision et le recouvrement.
 
-l'accuracy c'est le nombre d'élements qui sont des entités-agrovoc et descripteurs en même temps divisé par le nombre de descripteurs. 
-La precision c'est le nombre d'entites-agrovoc qui sont aussi des descripteurs divisé par le nomre total d'entités-agrovoc. 
+L'accuracy c'est le nombre d'élements qui sont des entités-agrovoc et descripteurs en même temps divisé par le nombre de descripteurs. 
+La precision c'est le nombre d'entites-agrovoc qui sont aussi des descripteurs divisé par le nombre total d'entités-agrovoc. 
 Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombre total d'entités.
 
 | Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités |
@@ -93,17 +93,21 @@ Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombr
 
 ### En images
 
+Nous avons pensé qu'il etait interessant de visualiser les mots qui sont identifiés le plus souvent par entity-fishing.
+Le wordcloud qui suit représente la frequence totale sur notre echantillon des entités-agrovoc.
+
 <p align='center'>
 	<img src='resources/wordcloudfr.png'>
 </p>
 
 ## Documentation
 
-L'indexation automatique a été faite avec des mots clés issus de Agrovoc. 
-En effet Agritrop identifie et décrit les ressources qu'il héberge 
+Nous avons crée un notebook [`documentation.ipynb`](documentation.ipynb) pour documenter notre code et donner des exemples.
 
 ## Conclusion
 
-On a donc
+Nous avons donc mis en place la toolchain nécessaire au traitement des publications. 
+A première vue, l'accuracy inferieure à 0.5 ne permettra pas pour l'instant d'appliquer la toolchain en production.
+Les pistes d'amélioration sont
 
 ## Bibliographie
