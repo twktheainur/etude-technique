@@ -57,7 +57,17 @@ Pour entity-fishing nous avons fait une requette très similaire, la seule diffi
 Nous avons utilisé le parseur `lxml` bour accéder au tag `<body>`.
 A la sortie d'entity-fishing nous recupérons un `json` avec toutes les entités identifiées.
 Ce `json` fournit aussi un lien vers le concept wikipédia, un score de confiance, et le span ou l'entité se trouve dans le texte.
-Nous n'aons pas pu exploiter ce score de confiance pour identifier les entités les plus coherentes car il ne representait pas la pertinence des concepts. 
+Nous n'aons pas pu exploiter ce score de confiance pour identifier les entités les plus coherentes car il ne representait pas la pertinence des concepts.
+
+## Résultats 
+
+### En chiffres
+
+### En images
+
+<p align='center'>
+	<img src='resources/wordcloudfr.png'>
+</p>
 
 ## Documentation
 
