@@ -17,6 +17,19 @@ Le but final de cette démarche est de faciliter la consultation et la recherche
 
 ## GROBID
 
+GROBID (GeneRation Of BIbliographic Data) est une librairie de machine learning qui permet de parser des publications scientifiques sous le format `pdf` et de le transformer au format `xml` TEI.
+Elle est implémentée en java et met a disposition un service REST. 
+Aujourd'hui GROBID est utilise en production dans des grandes archives scientifiques comme HAL et ResearchGate.
+
+
+## Entity-fishing
+
+Entity-fishing est un outil developpé par les mêmes auteurs que GROBID et sont etroitement liés.
+Par exemple entity-fishing necessite GROBID et GROBID-NER (Named Entity Recognition) pour fonctionner.
+Cet outil dispose aussi d'une API REST que nous avons utilisé.
+
+
+
 ## Documentation
 
 L'indexation automatique a été faite avec des mots clés issus de Agrovoc. 
