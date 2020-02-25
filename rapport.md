@@ -38,10 +38,11 @@ Voici un exemple de sortie dans la [webapp de démonstration](http://cloud.scien
 ## AGROVOC
 
 Le dernier élément nécessaire pour notre étude technique est le thesarus [AGROVOC](http://aims.fao.org/fr/agrovoc).
-AGROVOC est un vocabulaire contrôlé couvrant tous les domaines d’intérêt de l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO), notamment ceux ayant trait à l'alimentation, la nutrition, l'agriculture, la pêche, la foresterie, l'environnement, etc. 
+
+C'est un vocabulaire contrôlé couvrant tous les domaines d’intérêt de l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO), notamment ceux ayant trait à l'alimentation, la nutrition, l'agriculture, la pêche, la foresterie, l'environnement, etc. 
 Il est publié par la FAO et révisé par une communauté d'experts. AGROVOC est utilisé par des chercheurs, des libraires et des gestionnaires d'information pour indexer, extraire et organiser des données dans des systèmes d'information agricole ou des pages web.
 
-
+Nous allons utiliser AGROVOC pour reconcilier les entités avec les mots clés des publications. 
 
 ## Deploiement
 
