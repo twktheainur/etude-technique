@@ -107,7 +107,12 @@ Nous avons crée un notebook [`documentation.ipynb`](documentation.ipynb) pour d
 ## Conclusion
 
 Nous avons donc mis en place la toolchain nécessaire au traitement des publications. 
-A première vue, l'accuracy inferieure à 0.5 ne permettra pas pour l'instant d'appliquer la toolchain en production.
+A première vue, l'accuracy inférieure à 0.5 ne permettra pas pour l'instant d'appliquer la toolchain en production.
+Une des raisons pour lesquelles notre systeme n'est pas performant est le fait que le modèle NER de entity-fishing est entrainé sur Wikipedia, or agrovoc est beaucoup plus sécialisé que wikipedia dans le domaine de l'agronomie.
+Une autre raison est que nous essayons de faire de l'extraction de mots clés en utilisant de l'extraction d'entités nommées. 
+Ce qui signifie que un mot-clé peut etre très pertinent même s'il n'est pas présent dans le texte. 
+Or notre système ne sera pas capable d'identifier de tels mots clés.
+
 Les pistes d'amélioration sont
 
 ## Bibliographie
