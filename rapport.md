@@ -26,7 +26,13 @@ Aujourd'hui GROBID est utilise en production dans des grandes archives scientifi
 
 Entity-fishing est un outil developpé par les mêmes auteurs que GROBID et sont etroitement liés.
 Par exemple entity-fishing necessite GROBID et GROBID-NER (Named Entity Recognition) pour fonctionner.
-Cet outil dispose aussi d'une API REST que nous avons utilisé.
+Cet outil dispose aussi d'une API REST que nous avons utilisé, il dispose de differents modèles pour les principaux languages européens.
+Ceux-ci sont entrainés sur Wikipédia et ne sont donc pas tout à fait adaptés au domaine de l'agronomie.
+
+Voici un exemple de sortie dans la webapp de démonstration:
+![NERD](resources/nerd.png)
+
+## Deploiement
 
 
 
