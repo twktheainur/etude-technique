@@ -35,6 +35,14 @@ Voici un exemple de sortie dans la [webapp de démonstration](http://cloud.scien
 	<img src='resources/nerd.png'>
 </p>
 
+## AGROVOC
+
+Le dernier élément nécessaire pour notre étude technique est le thesarus [AGROVOC](http://aims.fao.org/fr/agrovoc).
+AGROVOC est un vocabulaire contrôlé couvrant tous les domaines d’intérêt de l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO), notamment ceux ayant trait à l'alimentation, la nutrition, l'agriculture, la pêche, la foresterie, l'environnement, etc. 
+Il est publié par la FAO et révisé par une communauté d'experts. AGROVOC est utilisé par des chercheurs, des libraires et des gestionnaires d'information pour indexer, extraire et organiser des données dans des systèmes d'information agricole ou des pages web.
+
+
+
 ## Deploiement
 
 Dans cette section nous allons expliquer comment nous avons procédé durant cette étude technique.
@@ -57,11 +65,18 @@ Pour entity-fishing nous avons fait une requette très similaire, la seule diffi
 Nous avons utilisé le parseur `lxml` bour accéder au tag `<body>`.
 A la sortie d'entity-fishing nous recupérons un `json` avec toutes les entités identifiées.
 Ce `json` fournit aussi un lien vers le concept wikipédia, un score de confiance, et le span ou l'entité se trouve dans le texte.
-Nous n'aons pas pu exploiter ce score de confiance pour identifier les entités les plus coherentes car il ne representait pas la pertinence des concepts.
+Nous n'avons pas pu exploiter ce score de confiance pour identifier les entités les plus coherentes car il ne representait pas la pertinence des concepts.
+
 
 ## Résultats 
 
+Dans cette section nous allons décrire les résultats que nous avont obtenu pour les publications en fançais et en anglais.
+
 ### En chiffres
+
+Nous avons identifié trois métriques intéressantes dans notre contexte: l'accuracy, la précision et le recouvrement.
+
+
 
 ### En images
 
