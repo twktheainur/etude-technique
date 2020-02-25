@@ -74,17 +74,17 @@ Nous n'avons pas pu exploiter ce score de confiance pour identifier les entités
 Dans cette section nous allons décrire les résultats que nous avont obtenu pour les publications en fançais et en anglais. 
 Le statistiques presentées dans cette section ont été calculées sur 100 publications car le temps d'execution est relativement élevé (plus ou moins 30 minutes pour les 100).
 Nous utilisons trois ensembles pour calculer les metriques: 
- - les _descripteurs_ de la publication (des mots clés issus de AGROVOC identifiés par des documentalistes/indexeurs qui decrivent la publication) on note $D$ cet ensemble;
- - les _entités_ (l'ensembles des termes identifiés par entity-fishing) on note $E$ cet ensemble;
- - les _entités-agrovoc_ (le sous ensemble des entités reconciliables avec AGROVOC ou encore l'intersection des entités avec AGROVOC) on note $A$ cet ensemble;
+ - les _descripteurs_ de la publication (des mots clés issus de AGROVOC identifiés par des documentalistes/indexeurs qui decrivent la publication);
+ - les _entités_ (l'ensembles des termes identifiés par entity-fishing);
+ - les _entités-agrovoc_ (le sous ensemble des entités reconciliables avec AGROVOC ou encore l'intersection des entités avec AGROVOC).
 
 ### En chiffres
 
 Nous avons identifié trois métriques intéressantes dans notre contexte: l'accuracy, la précision et le recouvrement.
 
-Nous avons donc:
-
-$$ accuracy = \frac{|D \cap A|}{|D|}$$
+l'accuracy c'est le nombre d'élements qui sont des entités-agrovoc et descripteurs en même temps divisé par le nombre de descripteurs. 
+La precision c'est le nombre d'entites-agrovoc qui sont aussi des descripteurs divisé par le nomre total d'entités-agrovoc. 
+Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombre total d'entités.
 
 | Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités |
 | ---- | -------: | --------: | -------: | ---------------------: |
