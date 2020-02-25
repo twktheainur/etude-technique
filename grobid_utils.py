@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 from lxml import etree
+import json
 import re
 
 
@@ -14,6 +15,18 @@ def get_body_text(root):
                     return ' '.join(sub_child.itertext())
 
 
+def get_abstract_text(root):
+    """Extracts the text from the "abstract" tag of a etree xml TEI"""
+
+    for child in root.getchildren():
+        if 'teiHeader' in child.tag:
+            for sub_child in child.getchildren():
+                if 'profileDesc' in sub_child.tag:
+                    for sub_sub_child in sub_child.getchildren():
+                        if 'abstract' in sub_sub_child.tag:
+                            return ' '.join(sub_sub_child.itertext())
+
+
 def pdf_to_xml(url):
     """Takes an url of a pdf as an input and returns its parsed xml TEI"""
 
@@ -23,13 +36,18 @@ def pdf_to_xml(url):
     return r.text
 
 
-def extract_entities(xml, lang='fr'):
+def extract_entities(xml, lang='fr', mode='fulltext'):
     """Takes an xml string and returns a json with the entities"""
 
     pattern = re.compile(r'<\?xml.*\?>')  # we need to get rid of the xml declaration
     xml = pattern.sub('', xml)
     root = etree.fromstring(xml)
-    fulltext = get_body_text(root)
+    if mode == 'full': 
+        fulltext = get_body_text(root)
+    elif mode == 'abstract':
+        fulltext = get_abstract_text(root)
+    else:
+        raise Exception('Unknown mode ' + mode)
     alphanumeric = re.compile("([^\w\s']|_|\n|\t)+")
     fulltext = alphanumeric.sub(' ', fulltext)
     query = '{"text": "' + fulltext + '", "language": {"lang": "' + lang + '"} }'
@@ -58,10 +76,20 @@ def to_agrovoc(concepts, agrovoc):
     result = set()
     for concept in concepts:
         result = result.union(agrovoc.find_with_agrovoc(concept))
-    return result        
+    return result
+
+
+def fetch_entities(text_json):
+    """Extracts the entities and categories from a json string to a list"""
+
+    text = json.loads(text_json)
+    entities = [part["rawName"].strip() for part in text["entities"]]
+    categories = [part["category"].strip() for part in text["global_categories"]]
+    return entities + categories        
 
 
 class GrobidCallback:
+    """Class to store indenxing performance statistics."""
 
     def __init__(self, agrovoc, message=""):
         self.average_accuracy = 0
