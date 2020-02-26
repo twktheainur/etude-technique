@@ -86,11 +86,11 @@ L'accuracy c'est le nombre d'élements qui sont des entités-agrovoc et descript
 La precision c'est le nombre d'entites-agrovoc qui sont aussi des descripteurs divisé par le nombre total d'entités-agrovoc. 
 Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombre total d'entités.
 
-| Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités |
-| ---- | -------: | --------: | -------: | ---------------------: |
-| Français - texte complet | 0.440 | 0.083 | 0.243 | 284 |
-| Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 |
-| Français - résumé | 0.268 | 0.239 | 0.461 | 24 |
+| Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités | Nombre de publications |
+| ---- | -------: | --------: | -------: | ---------------------: | ---------------------: |
+| Français - texte complet | 0.440 | 0.083 | 0.243 | 284 | 130 |
+| Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 | 100 |
+| Français - résumé | 0.275 | 0.239 | 0.464 | 24 | 300 |
 
 Le violinplot suivant reprend le mêmes chiffres mais montre les distributions:
 
