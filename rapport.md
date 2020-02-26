@@ -87,7 +87,7 @@ La precision c'est le nombre d'entites-agrovoc qui sont aussi des descripteurs d
 Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombre total d'entités.
 
 | Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités | Nombre de publications |
-| ---- | -------: | --------: | -------: | ---------------------: | ---------------------: |
+| ---- | -------: | --------: | -------: | -------: | --------: |
 | Français - texte complet | 0.440 | 0.083 | 0.243 | 284 | 130 |
 | Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 | 100 |
 | Français - résumé | 0.275 | 0.239 | 0.464 | 24 | 300 |
