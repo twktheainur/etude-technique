@@ -86,15 +86,25 @@ L'accuracy c'est le nombre d’éléments qui sont des entités-agrovoc et descr
 La précision c'est le nombre d’entités-agrovoc qui sont aussi des descripteurs divisé par le nombre total d'entités-agrovoc. 
 Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombre total d'entités.
 
-| Mode | Accuracy | Précision | Recovery | Nombre moyen d'entités |
-| ---- | -------: | --------: | -------: | ---------------------: |
-| Français - texte complet | 0.455 | 0.070 | 0.226 | 297 |
-| Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 |
+| Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités | Nombre de publications |
+| ---- | -------: | --------: | -------: | -------: | --------: |
+| Français - texte complet | 0.440 | 0.083 | 0.243 | 284 | 130 |
+| Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 | 100 |
+| Français - résumé | 0.275 | 0.239 | 0.464 | 24 | 300 |
+| Anglais - résumé | 0.159 | 0.241 | 0.310 | 17 | 300 |
 
-Le violinplot suivant reprend le mêmes chiffres mais montre les distributions:
+**Note**: Nombre de publications donne le nombre de publications sur lesquelles nous avons fait les mesures.
+
+Le violinplot suivant reprend le mêmes chiffres mais montre les distributions pour les textes complets:
 
 <p align='center'>
 	<img src='resources/violinplot.png'>
+</p>
+
+Celui-ci montre la performance du système sur les résumés:
+
+<p align='center'>
+	<img src='resources/abstract_violinplot.png'>
 </p>
 
 ### En images
@@ -118,5 +128,3 @@ Une des raisons pour lesquelles notre système n'est pas performant est le fait 
 Une autre raison est que nous essayons de faire de l'extraction de mots clés en utilisant de l'extraction d'entités nommées. 
 Ce qui signifie que un mot-clé peut être très pertinent même s'il n'est pas présent dans le texte. 
 Or notre système ne sera pas capable d'identifier de tels mots clés.
-
-## Bibliographie

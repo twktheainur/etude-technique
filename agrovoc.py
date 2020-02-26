@@ -1,6 +1,7 @@
 from logging import getLogger
 from rdflib import Graph, Namespace
 import zipfile
+from os.path import isfile
 
 from reconciler.dictionary import StringDictionaryLoader
 from reconciler.recognizer.IntersStemConceptRecognizer import IntersStemConceptRecognizer
@@ -11,10 +12,11 @@ logger = getLogger("Agrovoc")
 class Agrovoc:
     def __init__(self, graph: Graph, lang='fr', agrovoc_zip_path="data/agrovoc.zip"):
         self.graph = graph
-        logger.info("Unzipping agrovoc...")
-        with zipfile.ZipFile(agrovoc_zip_path, 'r') as zip_ref:
-            zip_ref.extractall('data')
-        logger.info("Loading agrovoc into ClaimsKG graph...")
+        if not isfile('data/agrovoc.rdf'):
+            logger.info("Unzipping agrovoc...")
+            with zipfile.ZipFile(agrovoc_zip_path, 'r') as zip_ref:
+                zip_ref.extractall('data')
+            logger.info("Loading agrovoc into ClaimsKG graph...")
 
         graph.parse('data/agrovoc.rdf')
 
