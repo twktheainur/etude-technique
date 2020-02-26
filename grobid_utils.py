@@ -1,5 +1,4 @@
 import requests
-import pandas as pd
 from lxml import etree
 import json
 import re
@@ -36,21 +35,17 @@ def pdf_to_xml(url):
     return r.text
 
 
-def extract_entities(xml, lang='fr', mode='fulltext'):
+def extract_entities(xml, lang='fr', mode='xml'):
     """Takes an xml string and returns a json with the entities"""
 
-    pattern = re.compile(r'<\?xml.*\?>')  # we need to get rid of the xml declaration
-    xml = pattern.sub('', xml)
-    root = etree.fromstring(xml)
-    if mode == 'fulltext': 
-        fulltext = get_body_text(root)
-    elif mode == 'abstract':
-        fulltext = get_abstract_text(root)
-    else:
-        raise Exception('Unknown mode ' + mode)
+    if mode == 'xml':
+        pattern = re.compile(r'<\?xml.*\?>')  # we need to get rid of the xml declaration
+        xml = pattern.sub('', xml)
+        root = etree.fromstring(xml)
+        text = get_body_text(root)
     alphanumeric = re.compile("([^\w\s']|_|\n|\t)+")
-    fulltext = alphanumeric.sub(' ', fulltext)
-    query = '{"text": "' + fulltext + '", "language": {"lang": "' + lang + '"} }'
+    text = alphanumeric.sub(' ', xml)
+    query = '{"text": "' + text + '", "language": {"lang": "' + lang + '"} }'
     r = requests.post('http://cloud.science-miner.com/nerd/service/disambiguate',
                       files={'query': query})
     return r.text

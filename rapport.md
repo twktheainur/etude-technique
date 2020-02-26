@@ -90,6 +90,7 @@ Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombr
 | ---- | -------: | --------: | -------: | ---------------------: |
 | Français - texte complet | 0.440 | 0.083 | 0.243 | 284 |
 | Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 |
+| Français - résumé | 0.268 | 0.239 | 0.461 | 24 |
 
 Le violinplot suivant reprend le mêmes chiffres mais montre les distributions:
 
