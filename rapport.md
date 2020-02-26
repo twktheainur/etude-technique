@@ -110,7 +110,7 @@ Celui-ci montre la performance du système sur les résumés:
 ### En images
 
 Nous avons pensé qu'il était intéressant de visualiser les mots qui sont identifiés le plus souvent par entity-fishing.
-Le wordcloud qui suit représente la fréquence totale sur notre échantillon des entités-agrovoc.
+Le wordcloud qui suit représente la fréquence totale sur notre échantillon des entités-agrovoc en français.
 
 <p align='center'>
 	<img src='resources/wordcloudfr.png'>
