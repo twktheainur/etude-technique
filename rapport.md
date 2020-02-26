@@ -99,6 +99,12 @@ Le violinplot suivant reprend le mêmes chiffres mais montre les distributions p
 	<img src='resources/violinplot.png'>
 </p>
 
+Celui-ci montre la performance du système sur les résumés:
+
+<p align='center'>
+	<img src='resources/abstract_violinplot.png'>
+</p>
+
 ### En images
 
 Nous avons pensé qu'il etait interessant de visualiser les mots qui sont identifiés le plus souvent par entity-fishing.
