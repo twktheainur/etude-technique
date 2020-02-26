@@ -93,6 +93,8 @@ Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombr
 | Français - résumé | 0.275 | 0.239 | 0.464 | 24 | 300 |
 | Anglais - résumé | 0.159 | 0.241 | 0.310 | 17 | 300 |
 
+**Note**: Nombre de publications donne ne nombre de publications sur lesquelles nous avons fait les mesures.
+
 Le violinplot suivant reprend le mêmes chiffres mais montre les distributions pour les textes complets:
 
 <p align='center'>
