@@ -93,7 +93,7 @@ Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombr
 | Français - résumé | 0.275 | 0.239 | 0.464 | 24 | 300 |
 | Anglais - résumé | 0.159 | 0.241 | 0.310 | 17 | 300 |
 
-**Note**: Nombre de publications donne ne nombre de publications sur lesquelles nous avons fait les mesures.
+**Note**: Nombre de publications donne le nombre de publications sur lesquelles nous avons fait les mesures.
 
 Le violinplot suivant reprend le mêmes chiffres mais montre les distributions pour les textes complets:
 
@@ -128,5 +128,3 @@ Une des raisons pour lesquelles notre systeme n'est pas performant est le fait q
 Une autre raison est que nous essayons de faire de l'extraction de mots clés en utilisant de l'extraction d'entités nommées. 
 Ce qui signifie que un mot-clé peut etre très pertinent même s'il n'est pas présent dans le texte. 
 Or notre système ne sera pas capable d'identifier de tels mots clés.
-
-## Bibliographie
