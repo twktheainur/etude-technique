@@ -42,7 +42,7 @@ def extract_entities(xml, lang='fr', mode='fulltext'):
     pattern = re.compile(r'<\?xml.*\?>')  # we need to get rid of the xml declaration
     xml = pattern.sub('', xml)
     root = etree.fromstring(xml)
-    if mode == 'full': 
+    if mode == 'fulltext': 
         fulltext = get_body_text(root)
     elif mode == 'abstract':
         fulltext = get_abstract_text(root)
