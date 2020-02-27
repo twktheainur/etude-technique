@@ -80,13 +80,13 @@ Nous utilisons trois ensembles pour calculer les métriques:
 
 ### En chiffres
 
-Nous avons identifié trois métriques intéressantes dans notre contexte: l'accuracy, la précision et le recouvrement.
+Nous avons identifié trois métriques intéressantes dans notre contexte: le recall, la précision et le recouvrement.
 
-L'accuracy c'est le nombre d’éléments qui sont des entités-agrovoc et descripteurs en même temps divisé par le nombre de descripteurs. 
+Le recall c'est le nombre d’éléments qui sont des entités-agrovoc et descripteurs en même temps divisé par le nombre de descripteurs. 
 La précision c'est le nombre d’entités-agrovoc qui sont aussi des descripteurs divisé par le nombre total d'entités-agrovoc. 
 Et enfin le recouvrement c'est le nombre d'entités-agrovoc divisé par le nombre total d'entités.
 
-| Mode | Accuracy | Precision | Recovery | Nombre moyen d'entités | Nombre de publications |
+| Mode | Recall | Precision | Overlap | Nombre moyen d'entités | Nombre de publications |
 | ---- | -------: | --------: | -------: | -------: | --------: |
 | Français - texte complet | 0.440 | 0.083 | 0.243 | 284 | 130 |
 | Anglais - texte complet | 0.490 | 0.061 | 0.150 | 840 | 100 |
@@ -123,7 +123,7 @@ Nous avons crée un notebook [`documentation.ipynb`](documentation.ipynb) pour d
 ## Conclusion
 
 Nous avons donc mis en place la toolchain nécessaire au traitement des publications. 
-A première vue, l'accuracy inférieure à 0.5 ne permettra pas pour l'instant d'appliquer la toolchain en production.
+A première vue, le recall inférieur à 0.5 ne permettra pas pour l'instant d'appliquer la toolchain en production.
 Une des raisons pour lesquelles notre système n'est pas performant est le fait que le modèle NER de entity-fishing est entraîné sur Wikipédia, or agrovoc est beaucoup plus spécialisé que Wikipédia dans le domaine de l'agronomie.
 Une autre raison est que nous essayons de faire de l'extraction de mots clés en utilisant de l'extraction d'entités nommées. 
 Ce qui signifie que un mot-clé peut être très pertinent même s'il n'est pas présent dans le texte. 
