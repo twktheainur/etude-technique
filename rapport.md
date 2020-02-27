@@ -1,6 +1,6 @@
 # Indexation automatique de publications
 
-__Février 2020 -- Beye, Qohafa, Neverov__
+__Février 2020 - Beye, Qohafa, Neverov__
 
 ## Introduction 
 

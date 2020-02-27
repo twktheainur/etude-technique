@@ -1,0 +1,136 @@
+{
+    "runtime": 2362,
+    "nbest": false,
+    "text": "La dégradation de la forêt est un changement de sa structure et de la composition floristique et faunistique, ce qui conduit à une perte de biodiversité, de production de biens et de services et à un accroissement de la vulnérabilité aux aléas climatiques et aux incendies. Elle concerne de vastes espaces en zone tropicale particulièrement dans les régions de fronts pionniers plus ou moins consolidés où la forêt primaire est soumise à l'extraction de bois, aux incendies et à la fragmentation. Pour évaluer son ampleur et son intensité, il est nécessaire de recourir à la télédétection. Mais les méthodologies disponibles restent encore insuffisantes. L'enjeu scientifique est de développer des méthodes adaptées à de grandes surfaces afin d'analyser l'effet de différentes perturbations sur les trajectoires suivies par le couvert forestier. Il s'agit également de distinguer différentes intensités de dégradation suite à l'accumulation de perturbations",
+    "language": {
+        "lang": "fr",
+        "conf": 0
+    },
+    "global_categories": [
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Climat tropical",
+            "page_id": 1129617
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Information géographique",
+            "page_id": 767977
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Économie de l'environnement",
+            "page_id": 1149733
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Technique culturale",
+            "page_id": 243210
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Forêt primaire",
+            "page_id": 3414845
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Biodiversité",
+            "page_id": 1112666
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Technologie spatiale",
+            "page_id": 3842912
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Grande distribution",
+            "page_id": 113517
+        },
+        {
+            "weight": 0.11111111111111112,
+            "source": "wikipedia-fr",
+            "category": "Télédétection",
+            "page_id": 3842951
+        }
+    ],
+    "entities": [
+        {
+            "rawName": "biodiversité",
+            "offsetStart": 140,
+            "offsetEnd": 152,
+            "nerd_score": 1,
+            "nerd_selection_score": 0.7463,
+            "wikipediaExternalRef": 3849806,
+            "wikidataId": "Q47041",
+            "domains": [
+                "Environment"
+            ]
+        },
+        {
+            "rawName": "zone tropicale",
+            "offsetStart": 309,
+            "offsetEnd": 323,
+            "nerd_score": 1,
+            "nerd_selection_score": 0.6338,
+            "wikipediaExternalRef": 56406,
+            "wikidataId": "Q135712",
+            "domains": [
+                "Meteorology"
+            ]
+        },
+        {
+            "rawName": "fronts pionniers",
+            "offsetStart": 361,
+            "offsetEnd": 377,
+            "nerd_score": 1,
+            "nerd_selection_score": 0.9836,
+            "wikipediaExternalRef": 2724741,
+            "wikidataId": "Q3088545"
+        },
+        {
+            "rawName": "forêt primaire",
+            "offsetStart": 409,
+            "offsetEnd": 423,
+            "nerd_score": 1,
+            "nerd_selection_score": 0.9894,
+            "wikipediaExternalRef": 609799,
+            "wikidataId": "Q208478",
+            "domains": [
+                "Plants",
+                "Environment"
+            ]
+        },
+        {
+            "rawName": "télédétection",
+            "offsetStart": 575,
+            "offsetEnd": 588,
+            "nerd_score": 1,
+            "nerd_selection_score": 0.7096,
+            "wikipediaExternalRef": 131013,
+            "wikidataId": "Q199687",
+            "domains": [
+                "Geology",
+                "Oceanography",
+                "Earth"
+            ]
+        },
+        {
+            "rawName": "grandes surfaces",
+            "offsetStart": 721,
+            "offsetEnd": 737,
+            "nerd_score": 1,
+            "nerd_selection_score": 0.5113,
+            "wikipediaExternalRef": 119364,
+            "wikidataId": "Q782468"
+        }
+    ]
+}
