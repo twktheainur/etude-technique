@@ -8,3 +8,6 @@ Notre travail repose sur les services mis a disposition par [GROBID](https://git
  - [`documentation.ipynb`](documentation.ipynb) Contient la doc.
 
 Le reste des fichiers sont utilisés dans les deux ci-dessus. 
+
+## Note
+Unzip agrovoc in data/
