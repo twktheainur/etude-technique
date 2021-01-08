@@ -26,11 +26,10 @@ def get_abstract_text(root):
                             return ' '.join(sub_sub_child.itertext())
 
 
-def pdf_to_xml(url):
+def pdf_to_xml(url, api_root='http://cloud.science-miner.com/grobid/api/processFulltextDocument'):
     """Takes an url of a pdf as an input and returns its parsed xml TEI"""
-
     r = requests.get(url)  # fetching the pdf
-    r = requests.post('http://cloud.science-miner.com/grobid/api/processFulltextDocument',
+    r = requests.post(api_root,
                       files={'input': r.content})
     return r.text
 
